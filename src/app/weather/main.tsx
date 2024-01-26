@@ -41,6 +41,7 @@ async function getData (): Promise<WeatherCurrent | null> {
   const WEATHER_API_KEY = process.env.NEXT_PUBLIC_WEATHER_API_KEY
 
   if (typeof WEATHER_API_KEY === 'undefined') {
+    console.error('WEATHER_API_KEY not found')
     return null
   }
 
